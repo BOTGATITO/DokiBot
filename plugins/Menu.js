@@ -226,9 +226,9 @@ let menu = `┏━━━━━━━━━━━━━━━━┓
 *AQUAMAN BOT PRO*
 `.trim()
  
-const img = ['https://telegra.ph/file/25c84ee654000190fb35a.jpg',
-'https://telegra.ph/file/25c84ee654000190fb35a.jpg',
-'https://telegra.ph/file/25c84ee654000190fb35a.jpg']
+const img = ['https://telegra.ph/file/cf5d90bba77d3bebad841.jpg',
+'https://telegra.ph/file/cf5d90bba77d3bebad841.jpg',
+'https://telegra.ph/file/cf5d90bba77d3bebad841.jpg']
 await conn.sendMessage(m.chat, { image: { url: img.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak })
 	
 } catch (e) {
