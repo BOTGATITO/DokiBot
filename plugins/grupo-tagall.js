@@ -8,7 +8,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
     const total = 0;
     var member = 0;
   }
-  const pesan = args.join` `;
+  const pesan = args.join`*FN ESPORT*`;
   const oi = `${pesan}`;
   let teks = `\n\n *Integrantes :  ${participants.length}* ${oi}\n\n┌──⭓ Ya revivan\n`;
   for (const mem of participants) {
