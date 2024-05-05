@@ -8,13 +8,15 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
     const total = 0;
     var member = 0;
   }
-  const pesan = args.join`*FN ESPORT*`;
+  const pesan = args.join` `;
   const oi = `${pesan}`;
-  let teks = `\n\n *Integrantes :  ${participants.length}* ${oi}\n\n┌──⭓ Ya revivan\n`;
+  let teks = `*FN ESPORT*\n_LEVANTENSEN_ 🔱\n\n *Integrantes :  ${participants.length}* ${oi}\n\n┌──⭓ Ya revivan🌪️\n`;
   for (const mem of participants) {
-    teks += `│⭔ @${mem.id.split('@')[0]}\n`;
+    teks += `│🔱 @${mem.id.split('@')[0]}\n`;
   }
-  teks += `└───────⭓`;
+  teks += `└───────⭓
+
+*AQUAMAN BOT¹*`;
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
 };
 handler.help = ['tagall <mesaje>', 'invocar <mesaje>'];
