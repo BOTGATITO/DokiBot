@@ -2,18 +2,8 @@ let handler = async (m, { isPrems, conn }) => {
 let time = global.db.data.users[m.sender].lastcofre + 0 // 36000000 10 Horas //86400000 24 Horas
 if (new Date - global.db.data.users[m.sender].lastcofre < 0) throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\𝚗𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`
 
-let img = 'https://cdn.discordapp.com/attachments/1009154096588140605/1157519423708614666/266e6004-6fa7-46cb-80db-c447a06f25d0.png?ex=6518e778&is=651795f8&hm=b5e0e6a1f1eaf029af44976033a245ed837f32674a3f903373ca3d84ce6f7daf&'
-let dia = Math.floor(Math.random() * 30)
-let tok = Math.floor(Math.random() * 10)
-let hadesb = Math.floor(Math.random() * 4000)
-let expp = Math.floor(Math.random() * 5000)
-
-  global.db.data.users[m.sender].limit += dia
-  global.db.data.users[m.sender].money += hadesb
-  global.db.data.users[m.sender].joincount += tok
-  global.db.data.users[m.sender].exp += expp
-  
-let texto = `*MAPA ALPES FREE FIRE 2023 🗺️*`
+let img = 'https://telegra.ph/file/1723e064e2e53e5e84b19.jpg' 
+let texto = `» 𝙈𝘼𝙋𝘼 𝘼𝙇𝙋𝙀𝙎 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 ✅`
 
 const fkontak = {
 	"key": {
@@ -29,28 +19,10 @@ const fkontak = {
 	},
 	"participant": "0@s.whatsapp.net"
 }
-await conn.sendFile(m.chat, img, 'hades.jpg', texto, fkontak)
-//await conn.sendButton(m.chat, texto, wm, img, [['🔰 𝙼𝙴𝙽𝚄', '/menu'] ], fkontak, m)  
+await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
 global.db.data.users[m.sender].lastcofre = new Date * 1
 }
-handler.help = ['daily']
-handler.tags = ['xp']
-handler.command = ['alpes', 'mapaalpes', 'mapaa'] 
+handler.command = ['alpes', 'mapaa', 'mapaalpes'] 
 handler.register = true
+handler.admin = true
 export default handler
-
-function pickRandom(list) {
-return list[Math.floor(Math.random() * list.length)]}
-
-function msToTime(duration) {
-  var milliseconds = parseInt((duration % 1000) / 100),
-    seconds = Math.floor((duration / 1000) % 60),
-    minutes = Math.floor((duration / (1000 * 60)) % 60),
-    hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
-
-  hours = (hours < 10) ? "0" + hours : hours
-  minutes = (minutes < 10) ? "0" + minutes : minutes
-  seconds = (seconds < 10) ? "0" + seconds : seconds
-
-  return hours + " Horas " + minutes + " Minutos"
-}
