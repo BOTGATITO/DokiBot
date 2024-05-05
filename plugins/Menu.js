@@ -28,13 +28,13 @@ lugarFecha.locale('es', formatoFecha)
 const horarioFecha = lugarFecha.format('dddd,DD [de] MMMM [del] YYYY│[Hora:]HH:mm A').replace(/^\w/, (c) => c.toUpperCase())
 
 let menu = `┏━━━━━━━━━━━━━━━━┓
-┃  ⏤͟͟͞AQUAMAN BOT
+┃  ⏤͟͟͞𝙁𝙉 𝙀𝙎𝙋𝙊𝙍𝙏
 ┃ ⭓¡𝘏𝘰𝘭𝘢! @${m.sender.split("@")[0]}
 ┃ ⭓𝘧𝘦𝘤𝘩𝘢 : ${week}, ${date} 
 ┗━━━━━━━━━━━━━━
  
 ╭━〔  𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 ⛅  〕⬣
-*┃➤ 👤 Bot :AQUAMAN BOT
+*┃➤ 👤 Bot :𝙁𝙉 𝙀𝙎𝙋𝙊𝙍𝙏
 *┃➤ ⌛ Tiempo activo : #uptime*
  ╰━━━━━━━━━━━━⬣
 
